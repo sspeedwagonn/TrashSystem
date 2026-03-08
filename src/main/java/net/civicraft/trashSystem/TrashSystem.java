@@ -20,6 +20,7 @@ public final class TrashSystem extends JavaPlugin {
         saveDefaultConfig();
     }
 
+    @SuppressWarnings("UnstableApiUsage")
     private void registerRecipe() {
         NamespacedKey key = new NamespacedKey(this, "trashcan");
 
