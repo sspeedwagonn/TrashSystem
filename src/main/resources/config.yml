@@ -1,0 +1,10 @@
+# TRASH COLLECTION METHOD
+# 1. "delete" - Trash put into trash cans will automatically get removed from the server
+# 2. "keep" - Trash will stay in the trash can indefinitely
+# 3. "keep-limited" - Trash will stay in the trash can for a limited time
+# 4. "transfer" - Trash will transfer to a larger collection system, like a plant
+collection-method: "delete"
+# SET TRASH
+# If enabled, any item can be turned into a trash can with /trashcan set <size>
+# Size options: small, medium, large
+set-trash: false

@@ -10,14 +10,17 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class TrashSystem extends JavaPlugin {
+    TrashSystem instance;
 
     @Override
     public void onEnable() {
         // Plugin startup logic
+        instance = this;
         registerRecipe();
+        saveDefaultConfig();
     }
 
-    public void registerRecipe() {
+    private void registerRecipe() {
         NamespacedKey key = new NamespacedKey(this, "trashcan");
 
         ItemStack item = ItemStack.of(Material.HOPPER);
@@ -31,8 +34,12 @@ public final class TrashSystem extends JavaPlugin {
         getServer().addRecipe(recipe);
     }
 
+    public static TrashSystem getInstance() {
+        return instance;
+    }
+
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        instance = null;
     }
 }
