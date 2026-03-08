@@ -10,7 +10,7 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class TrashSystem extends JavaPlugin {
-    TrashSystem instance;
+    static TrashSystem instance;
 
     @Override
     public void onEnable() {
