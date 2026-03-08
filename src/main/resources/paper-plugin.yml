@@ -1,0 +1,4 @@
+name: TrashSystem
+version: '1.0'
+main: net.civicraft.trashSystem.TrashSystem
+api-version: '1.21'
